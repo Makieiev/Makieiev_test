@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+      <!--Напишите функцию, которая возвращает n-е число Фибоначчи. Для решения используйте рекурсию.-->
+		<html>
+		<head>
+			<title>Домашнее задание 3-4 JS Макеев Владимир</title>
+	<script type="text/javascript">
+        
+        var fib = 0, q = 1;
+    
+        function fibon(fib, q, num) {
+            if (num <= 0) {
+                return NaN;
+            } else if (num == 1) {
+                return 0;
+            }
+
+            var c = fib + q;
+            num -= 1;
+            fib = q;
+            q = c;
+            if (num - 2 > 0) {
+                c = fibon(fib, q, num);
+            }
+            return c;
+        }
+        num = +prompt("Введите число:");
+        alert("Результат : "+""+fibon(fib, q, num));
+    </script>
+		</head>
+		<body>
+		
+		</body>
+		</html>	
